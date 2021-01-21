@@ -268,7 +268,7 @@ campi di testo e manipolazione di stringhe.
 	#include mul.h
 	MUL_DATE  MUL_DATE_adddays(MUL_DATE, int)
 
-	Restituisce la data ottenuta sommando i giorni specificati.<br>
+	Restituisce la data ottenuta sommando i giorni specificati.
 	La procedura si	occupa di allocare la memoria necessaria.
 
     -----------------------------------------------------------------------
@@ -338,7 +338,7 @@ campi di testo e manipolazione di stringhe.
 
 	Esegue lo shift circolare di 13 posizioni dei caratteri della stringa.
 	I caratteri validi per lo shift sono soltanto i codici ascii
-        corrispondenti ai caratteri alfabetici, tutti gli altri codici vengono
+	corrispondenti ai caratteri alfabetici, tutti gli altri codici vengono
 	lasciati inalterati dall'algoritmo.
 	La riapplicazione dell'algoritmo restituisce la stringa di partenza.
 
