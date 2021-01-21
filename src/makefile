@@ -1,0 +1,41 @@
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+#   ________        _________________.________
+#  /  _____/  ____ /   _____/   __   \   ____/
+# /   \  ___ /  _ \\_____  \\____    /____  \
+#  \    \_\  (  <_> )        \  /    //       \
+#   \______  /\____/_______  / /____//______  /
+#          \/              \/               \/
+# 
+# Autore....: Alessandro Fraschetti
+# Funzione..: makefile della libreria GoS'95 Micro Utility Library
+# Input.....: -
+# Output....: library
+# Note......:
+#
+#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+
+ 
+SOURCES  = mulpgm.c muldate.c mulsystem.c multext.c
+OBJECTS  = $(SOURCES:.c=.o)
+INCLUDES = .
+LIBRARY  = mul
+DISTPATH = ../distrib
+ANAME    = lib$(LIBRARY).a
+CC       = gcc
+AR       = ar
+RM       = del
+CFLAGS   = -Wall -ansi -pedantic -O2 -I$(INCLUDES) -c
+
+
+$(ANAME): $(OBJECTS)
+	$(AR) crs $(DISTPATH)/$(ANAME) $(OBJECTS)
+	copy *.h ..\distrib\*.h
+
+$(OBJECTS): $(SOURCES)
+	$(CC) $(CFLAGS) $(SOURCES)
+
+
+.PHONY: clean
+clean:
+	$(RM) $(OBJECTS)
+	$(RM) $(DISTPATH)/$(ANAME)

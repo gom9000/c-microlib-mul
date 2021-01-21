@@ -1,0 +1,12 @@
+TODO:
+-----
+- una funzione per il delay(msec);
+
+
+- funzioni per la gestione di campi di testo:
+        campi alfanumerico/numerico|decimale/telefono/email/data/...:
+              ........
+        normalizzazione: 
+              char *leftAlign(char*, char, int)
+	      char *rightAlign(char*, char, int)
+	      char *middleAlign(char*, char, int)
