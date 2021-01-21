@@ -172,14 +172,14 @@ campi di testo e manipolazione di stringhe.
         nella struttura puntata da info e relative alle sole informazioni
 	generiche del programma: name, version, vendor.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	void MUL_PGM_usage(MUL_PGM_INFO infousage)
 
 	Scrive sul dispositivo di standard output le informazioni contenute
 	nella struttura puntata da infousage.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	char *MUL_PGM_logo(char *tab, int height)
 
@@ -199,20 +199,20 @@ campi di testo e manipolazione di stringhe.
 	dell'elaboratore. Rappresenta il più piccolo numero reale che sommato
 	ad 1 da come risultato un numero floating maggiore di 1.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	int MUL_SYSTEM_pause(void)
 
 	Arresta l'esecuzione del programma finchè non viene premuto un tasto,
 	e ritorna il codice di scansione del tasto premuto.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	void MUL_SYSTEM_cls(void)
 
 	Esegue il clearscreen dell'intera area video.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 
 #### MUL_DATE
 	#include mul.h
@@ -220,7 +220,7 @@ campi di testo e manipolazione di stringhe.
 
 	Controlla se la stringa è una data valida.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	MUL_DATE MUL_DATE_atoDATE(char*)
 
@@ -230,26 +230,26 @@ campi di testo e manipolazione di stringhe.
 	tutti i campi hanno valore 0. La procedura si occupa di allocare la
 	memoria necessaria.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	char *MUL_DATE_toa(MUL_DATE)
 
 	Converte la data MUL_DATE in una stringa di testo. La procedura si
 	occupa di allocare la memoria necessaria.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	int MUL_DATE_dayofyear(MUL_DATE)
 
 	Restituisce il numero di giorni passati dall'inizio dell'anno.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	int MUL_DATE_daysofcarry(MUL_DATE)
 
 	Restituisce il numero di giorni che mancano alla fine dell'anno.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	int MUL_DATE_diff(MUL_DATE, MUL_DATE)
 
@@ -257,56 +257,56 @@ campi di testo e manipolazione di stringhe.
 	Si presuppone che la prima data sia maggiore della seconda (si può
 	usare la funzione MUL_DATE_compare() per questo).
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	int MUL_DATE_compare(MUL_DATE, MUL_DATE)
 
 	Restituisce il confronto tra due date come:
 	   1 se  d1 > d2, 0 se  d1 = d2, -1 se  d1 < d2.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	MUL_DATE  MUL_DATE_adddays(MUL_DATE, int)
 
-	Restituisce la data ottenuta sommando i giorni specificati.
+	Restituisce la data ottenuta sommando i giorni specificati.<br>
 	La procedura si	occupa di allocare la memoria necessaria.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	char MUL_DATE_leapyear(int)
 
 	Macro funzione.
 	Restituisce 1 se l'anno specificato è bisestile, altrimenti 0.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	int MUL_DATE_daysofmonth(int)
 
 	Macro funzione.
 	Restituisce il numero di giorni del mese.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	int MUL_DATE_day(MUL_DATE)
 
 	Macro funzione.
 	Restituisce il giorno della data MUL_DATE.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	int MUL_DATE_month(MUL_DATE)
 
 	Macro funzione.
 	Restituisce il mese della data MUL_DATE.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	int MUL_DATE_year(MUL_DATE)
 
 	Macro funzione.
 	Restituisce l'anno della data MUL_DATE.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	char MUL_DATE_leap(MUL_DATE)
 
@@ -314,14 +314,14 @@ campi di testo e manipolazione di stringhe.
 	Restituisce 1 se la data MUL_DATE corrisponde ad un anno bisestile,
 	altrimenti 0.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	char MUL_DATE_separator(MUL_DATE)
 
 	Macro funzione.
 	Restituisce il carattere separatore della data MUL_DATE.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 
 #### MUL_TEXT
 	#include mul.h
@@ -332,7 +332,7 @@ campi di testo e manipolazione di stringhe.
 	La riapplicazione dell'algoritmo con n negativo restituisce la stringa
 	di partenza.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	char *MUL_TEXT_rot13(char*)
 
@@ -342,32 +342,32 @@ campi di testo e manipolazione di stringhe.
 	lasciati inalterati dall'algoritmo.
 	La riapplicazione dell'algoritmo restituisce la stringa di partenza.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	char *MUL_TEXT_leftTrim(char*, char)
 
 	Elimina tutte le occorrenze del carattere specificato alla sinistra
 	della stringa.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	char *MUL_TEXT_rightTrim(char*, char)
 
 	Elimina tutte le occorrenze del carattere specificato alla destra
 	della stringa.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	char *MUL_TEXT_trim(char*, char)
 
 	Elimina tutte le occorrenze del carattere specificato a destra ed a
 	sinistra della stringa.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
 	#include mul.h
 	char *MUL_TEXT_inTrim(char*, char);
 
 	Elimina tutte le occorrenze multiple del carattere specificato
 	all'interno della stringa.
 
-        -----------------------------------------------------------------------
+    -----------------------------------------------------------------------
