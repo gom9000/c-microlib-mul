@@ -1,25 +1,15 @@
-FGOS'95 - Free Gos Software '95                                  02 maggio 1999
--------------------------------------------------------------------------------
+# Micro Utility Library (Versione 1.1 - 02 maggio 1999)
 
-			 MUL (Micro Utility Library)
-                         ---------------------------
-
-			        Versione 1.1
-
-  		              Free GoS'95, 1999
-
-
-Libreria di routines di utilità generica per la programmazione in linguaggio C.
+Libreria di routines di utilità generica per la programmazione in linguaggio C.<br>
 La libreria è suddivisa nei seguenti moduli:
 
-
-Modulo      Acronimo         Descrizione
-----------  ---------------  --------------------------------------------------
-PROGRAM     MUL_PGM          Funzioni utilità di programma
-SYSTEM      MUL_SYSTEM       Funzioni di sistema e di ambiente
-DATE        MUL_DATE         Funzioni per la manipolazione delle date
-TEXT        MUL_TEXT         Funzioni per la manipolazione di campi di testo
-----------  ---------------  --------------------------------------------------
+	Modulo      Acronimo         Descrizione
+	----------  ---------------  --------------------------------------------------
+	PROGRAM     MUL_PGM          Funzioni utilità di programma
+	SYSTEM      MUL_SYSTEM       Funzioni di sistema e di ambiente
+	DATE        MUL_DATE         Funzioni per la manipolazione delle date
+	TEXT        MUL_TEXT         Funzioni per la manipolazione di campi di testo
+	----------  ---------------  --------------------------------------------------
 
 La distribuzione della libreria consiste dei seguenti files:
 
@@ -39,11 +29,9 @@ La distribuzione della libreria consiste dei seguenti files:
 
 
 
-FGoS'95 Micro Utility Library
-Modulo PROGRAM (MUL_PRG) - Funzioni di utilità di programma
--------------------------------------------------------------------------------
+## Modulo PROGRAM (MUL_PRG) - Funzioni di utilità di programma
 
-Modulo contenente alcune funzioni di utilità generica di programma.
+Modulo contenente alcune funzioni di utilità generica di programma.<br>
 Per memorizzare le informazioni di programma si utilizza la struttura:
 
 	MUL_PGM_INFO
@@ -101,9 +89,7 @@ Esempio di utilizzo:
 
 
 
-FGoS'95 Micro Utility Library
-Modulo SYSTEM (MUL_SYSTEM) - Funzioni di sistema e di ambiente
--------------------------------------------------------------------------------
+## Modulo SYSTEM (MUL_SYSTEM) - Funzioni di sistema e di ambiente
 
 Modulo contenente alcune funzioni di utilità generica relativa all'ambiente di
 esecuzione del programma, tra cui il recupero dell'epsilon di macchina (o unità
@@ -116,11 +102,9 @@ di arrotondamento dell'elaboratore).
 
 
 
-FGoS'95 Micro Utility Library
-Modulo DATE (MUL_DATE) - Funzioni per la manipolazione delle date
--------------------------------------------------------------------------------
+## Modulo DATE (MUL_DATE) - Funzioni per la manipolazione delle date
 
-Modulo contenente alcune funzioni di utilità per la manipolazione delle date.
+Modulo contenente alcune funzioni di utilità per la manipolazione delle date.<br>
 Per memorizzare le informazioni di una data si utilizza la struttura:
 
 	MUL_DATE
@@ -138,7 +122,7 @@ Per creare un tipo MUL_DATE si hanno a disposizione le funzioni:
 	int       MUL_DATE_checkstring(char*);
 	MUL_DATE  MUL_DATE_atoDATE(char*);
 
-che consentono di creare il campo data partendo da una stringa.
+che consentono di creare il campo data partendo da una stringa.<br>
 Per la manipolazione di un campo MUL_DATE sono disponibili le funzioni:
 
 	int	  MUL_DATE_daysofmonth(int)
@@ -163,9 +147,7 @@ occupa al suo interno dell'allocazione di memoria necessaria.
 
 
 
-FGoS'95 Micro Utility Library
-Modulo TEXT (MUL_TEXT) - Funzioni per la manipolazione di campi di testo
--------------------------------------------------------------------------------
+## Modulo TEXT (MUL_TEXT) - Funzioni per la manipolazione di campi di testo
 
 Modulo contenente alcune funzioni di utilità generica relativa alla gestione di
 campi di testo e manipolazione di stringhe.
@@ -180,11 +162,9 @@ campi di testo e manipolazione di stringhe.
 
 
 
-FGoS'95 Micro Utility Library
-Elenco e descrizione di tutte le funzioni della libreria
--------------------------------------------------------------------------------
+## Elenco e descrizione di tutte le funzioni della libreria
 
-- MUL_PGM ---------------------------------------------------------------------
+#### MUL_PGM
 	#include mul.h
 	void MUL_PGM_info(MUL_PGM_INFO info)
 
@@ -209,9 +189,9 @@ Elenco e descrizione di tutte le funzioni della libreria
 	alla funzione sovrascrivono ogni precedente valore. Il parametro height
 	specifica l'altezza in righe del logo.
 
-        -----------------------------------------------------------------------
+	-----------------------------------------------------------------------
 
-- MUL_SYSTEM ------------------------------------------------------------------
+#### MUL_SYSTEM
 	#include mul.h
 	float MUL_SYSTEM_epsilon(void)
 
@@ -234,7 +214,7 @@ Elenco e descrizione di tutte le funzioni della libreria
 
         -----------------------------------------------------------------------
 
-- MUL_DATE --------------------------------------------------------------------
+#### MUL_DATE
 	#include mul.h
 	int MUL_DATE_checkstring(char*)
 
@@ -343,7 +323,7 @@ Elenco e descrizione di tutte le funzioni della libreria
 
         -----------------------------------------------------------------------
 
-- MUL_TEXT --------------------------------------------------------------------
+#### MUL_TEXT
 	#include mul.h
 	char *MUL_TEXT_shiftN(char*, int)
 
@@ -391,5 +371,3 @@ Elenco e descrizione di tutte le funzioni della libreria
 	all'interno della stringa.
 
         -----------------------------------------------------------------------
-
--------------------------------------------------------------------------------
